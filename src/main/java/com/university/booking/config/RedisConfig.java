@@ -8,6 +8,9 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import io.lettuce.core.ClientOptions;
 
+import com.university.booking.service.AnalyticsCache;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.data.redis.LettuceClientConfigurationBuilderCustomizer;
 import org.springframework.cache.annotation.EnableCaching;
@@ -66,7 +69,8 @@ public class RedisConfig {
     }
 
     @Bean
-    public RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory) {
+    public RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory,
+                                          @Value("${app.analytics.cache-ttl-seconds:60}") long analyticsTtlSeconds) {
         GenericJackson2JsonRedisSerializer serializer = new GenericJackson2JsonRedisSerializer(buildRedisObjectMapper());
 
         RedisCacheConfiguration cacheConfig = RedisCacheConfiguration.defaultCacheConfig()
@@ -77,6 +81,7 @@ public class RedisConfig {
 
         return RedisCacheManager.builder(connectionFactory)
                 .cacheDefaults(cacheConfig)
+                .withCacheConfiguration(AnalyticsCache.NAME, cacheConfig.entryTtl(Duration.ofSeconds(analyticsTtlSeconds)))
                 .build();
     }
 }

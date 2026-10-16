@@ -5,11 +5,10 @@ import com.university.booking.model.Booking;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
-public interface BookingRepository extends JpaRepository<Booking, String> {
+public interface BookingRepository extends MongoRepository<Booking, String> {
 
     List<Booking> findByPersonIdOrderByCreatedAtAsc(String personId);
 
@@ -18,18 +17,12 @@ public interface BookingRepository extends JpaRepository<Booking, String> {
     List<Booking> findByRoomIdAndEventDateAndStatusOrderByStartTimeAsc(String roomId, LocalDate eventDate,
                                                                        BookingStatus status);
 
-    @Query("""
-            select b from Booking b
-            where b.roomId = :roomId
-              and b.eventDate = :date
-              and b.status = :status
-              and b.startTime < :endTime
-              and b.endTime > :startTime
-            order by b.startTime
-            """)
-    List<Booking> findOverlapping(@Param("roomId") String roomId,
-                                  @Param("date") LocalDate date,
-                                  @Param("startTime") LocalTime startTime,
-                                  @Param("endTime") LocalTime endTime,
-                                  @Param("status") BookingStatus status);
+    boolean existsByOrganizationId(String organizationId);
+
+    @Query(value = """
+            { 'roomId': ?0, 'eventDate': ?1, 'status': ?4,
+              'startTime': { $lt: ?3 }, 'endTime': { $gt: ?2 } }
+            """, sort = "{ 'startTime': 1 }")
+    List<Booking> findOverlapping(String roomId, LocalDate date, LocalTime startTime, LocalTime endTime,
+                                  BookingStatus status);
 }

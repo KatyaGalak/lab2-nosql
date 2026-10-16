@@ -27,6 +27,7 @@ public class CartItem {
     private LocalTime endTime;
     private int participantCount;
     private String contactPhone;
+    private String organizationId;
     private LocalDateTime addedAt;
 
     public static CartItem from(BookingRequest request) {
@@ -40,6 +41,7 @@ public class CartItem {
                 .endTime(request.getEndTime())
                 .participantCount(request.getParticipantCount())
                 .contactPhone(request.getContactPhone())
+                .organizationId(request.getOrganizationId())
                 .addedAt(LocalDateTime.now())
                 .build();
     }
@@ -54,6 +56,7 @@ public class CartItem {
                 .endTime(endTime)
                 .participantCount(participantCount)
                 .contactPhone(contactPhone)
+                .organizationId(organizationId)
                 .build();
     }
 }

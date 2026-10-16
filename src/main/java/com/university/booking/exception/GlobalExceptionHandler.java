@@ -5,7 +5,10 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
+import com.mongodb.MongoException;
+import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -19,6 +22,8 @@ import org.springframework.web.server.ResponseStatusException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    private static final int WRITE_CONFLICT_CODE = 112;
+
     @ExceptionHandler(BookingException.class)
     public ResponseEntity<ErrorResponse> handleBooking(BookingException ex) {
         log.atWarn()
@@ -30,14 +35,52 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ErrorResponse> handleIntegrity(DataIntegrityViolationException ex) {
+        if (isWriteConflict(ex)) {
+            return writeConflict(ex);
+        }
         String cause = ex.getMostSpecificCause().getMessage();
-        String message = cause != null && cause.contains("bookings_no_overlap")
-                ? "Помещение уже занято на это время"
-                : "Операция нарушает ограничения базы данных";
+        HttpStatus status;
+        String message;
+        if (ex instanceof DuplicateKeyException) {
+            status = HttpStatus.CONFLICT;
+            message = "Документ с таким идентификатором уже существует";
+        } else if (cause != null && cause.contains("Document failed validation")) {
+            status = HttpStatus.BAD_REQUEST;
+            message = "Документ не прошёл проверку JSON Schema";
+        } else {
+            status = HttpStatus.CONFLICT;
+            message = "Операция нарушает ограничения базы данных";
+        }
         log.atWarn()
                 .addKeyValue("exception", ex.getClass().getSimpleName())
                 .log(cause);
-        return ResponseEntity.status(HttpStatus.CONFLICT).body(build(HttpStatus.CONFLICT.value(), message));
+        return ResponseEntity.status(status).body(build(status.value(), message));
+    }
+
+    @ExceptionHandler(DataAccessException.class)
+    public ResponseEntity<ErrorResponse> handleDataAccess(DataAccessException ex) {
+        if (isWriteConflict(ex)) {
+            return writeConflict(ex);
+        }
+        return handleUnexpected(ex);
+    }
+
+    private ResponseEntity<ErrorResponse> writeConflict(Exception ex) {
+        log.atWarn()
+                .addKeyValue("exception", ex.getClass().getSimpleName())
+                .log("transaction write conflict: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(build(HttpStatus.CONFLICT.value(),
+                "Данные одновременно изменяются другим запросом, повторите действие"));
+    }
+
+    private static boolean isWriteConflict(Throwable ex) {
+        for (Throwable t = ex; t != null; t = t.getCause()) {
+            if (t instanceof MongoException mongo
+                    && (mongo.getCode() == WRITE_CONFLICT_CODE || mongo.hasErrorLabel(MongoException.TRANSIENT_TRANSACTION_ERROR_LABEL))) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @ExceptionHandler(ResponseStatusException.class)

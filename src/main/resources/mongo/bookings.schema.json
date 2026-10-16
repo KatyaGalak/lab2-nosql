@@ -1,0 +1,52 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "Заявка на бронирование помещения",
+    "required": ["personId", "roomId", "categoryId", "eventName", "eventDate", "startTime", "endTime",
+                 "participantCount", "status", "createdAt", "comments", "history", "schemaVersion"],
+    "properties": {
+      "personId": { "bsonType": "string", "minLength": 1 },
+      "organizationId": { "bsonType": ["string", "null"] },
+      "roomId": { "bsonType": "string", "minLength": 1 },
+      "categoryId": { "bsonType": "string", "minLength": 1 },
+      "eventName": { "bsonType": "string", "minLength": 1 },
+      "eventDate": { "bsonType": "date" },
+      "startTime": { "bsonType": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$" },
+      "endTime": { "bsonType": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$" },
+      "participantCount": { "bsonType": ["int", "long"], "minimum": 1 },
+      "contactPhone": { "bsonType": "string" },
+      "status": { "enum": ["DRAFT", "UNDER_REVIEW", "APPROVED", "REJECTED"] },
+      "processedBy": { "bsonType": ["string", "null"] },
+      "createdAt": { "bsonType": "date" },
+      "processedAt": { "bsonType": ["date", "null"] },
+      "schemaVersion": { "bsonType": "int", "minimum": 2 },
+      "comments": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "required": ["id", "authorId", "text", "createdAt"],
+          "properties": {
+            "id": { "bsonType": "string" },
+            "authorId": { "bsonType": "string", "minLength": 1 },
+            "text": { "bsonType": "string", "minLength": 1, "maxLength": 1000 },
+            "createdAt": { "bsonType": "date" }
+          }
+        }
+      },
+      "history": {
+        "bsonType": "array",
+        "minItems": 1,
+        "items": {
+          "bsonType": "object",
+          "required": ["status", "changedAt", "author", "reason"],
+          "properties": {
+            "status": { "enum": ["DRAFT", "UNDER_REVIEW", "APPROVED", "REJECTED"] },
+            "changedAt": { "bsonType": "date" },
+            "author": { "bsonType": "string", "minLength": 1 },
+            "reason": { "bsonType": "string", "minLength": 1, "maxLength": 500 }
+          }
+        }
+      }
+    }
+  }
+}

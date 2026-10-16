@@ -1,27 +1,23 @@
 package com.university.booking.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.university.booking.enums.BookingStatus;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
-import jakarta.persistence.Index;
-import jakarta.persistence.Table;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "bookings", indexes = {
-        @Index(name = "idx_bookings_person_id", columnList = "person_id"),
-        @Index(name = "idx_bookings_room_date", columnList = "room_id, event_date")
-})
+@Document(collection = "bookings")
 @Getter
 @Setter
 @Builder
@@ -29,16 +25,17 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Booking {
 
+    public static final int SCHEMA_VERSION = 2;
+
     @Id
     private String id;
 
-    @Column(nullable = false)
     private String personId;
 
-    @Column(nullable = false)
+    private String organizationId;
+
     private String roomId;
 
-    @Column(nullable = false)
     private String categoryId;
 
     private String eventName;
@@ -48,11 +45,22 @@ public class Booking {
     private int participantCount;
     private String contactPhone;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     private BookingStatus status;
 
     private String processedBy;
     private LocalDateTime createdAt;
     private LocalDateTime processedAt;
+
+    @Builder.Default
+    private List<Comment> comments = new ArrayList<>();
+
+    @Builder.Default
+    private List<HistoryEntry> history = new ArrayList<>();
+
+    @Builder.Default
+    private int schemaVersion = SCHEMA_VERSION;
+
+    @Transient
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Map<String, String> personNames;
 }

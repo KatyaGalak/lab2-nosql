@@ -1,19 +1,16 @@
 package com.university.booking.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.university.booking.enums.RoomType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "rooms")
+@Document(collection = "rooms")
 @Getter
 @Setter
 @Builder
@@ -26,13 +23,14 @@ public class Room {
 
     private String name;
 
-    @Enumerated(EnumType.STRING)
     private RoomType type;
 
     private int capacity;
 
     private String location;
 
-    @jakarta.persistence.Column(columnDefinition = "BOOLEAN DEFAULT FALSE")
     private boolean teacherOnly;
+
+    @JsonIgnore
+    private long approvalVersion;
 }

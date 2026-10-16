@@ -1,0 +1,25 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "title": "Организатор заявок",
+    "required": ["name", "type", "active", "stats"],
+    "properties": {
+      "name": { "bsonType": "string", "minLength": 1 },
+      "type": { "enum": ["DEPARTMENT", "STUDENT_CLUB", "PARTNER"] },
+      "contact": { "bsonType": ["string", "null"] },
+      "active": { "bsonType": "bool" },
+      "createdAt": { "bsonType": "date" },
+      "stats": {
+        "bsonType": "object",
+        "required": ["total", "draft", "underReview", "approved", "rejected"],
+        "properties": {
+          "total": { "bsonType": ["int", "long"], "minimum": 0 },
+          "draft": { "bsonType": ["int", "long"], "minimum": 0 },
+          "underReview": { "bsonType": ["int", "long"], "minimum": 0 },
+          "approved": { "bsonType": ["int", "long"], "minimum": 0 },
+          "rejected": { "bsonType": ["int", "long"], "minimum": 0 }
+        }
+      }
+    }
+  }
+}

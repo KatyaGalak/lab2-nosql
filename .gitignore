@@ -11,7 +11,6 @@ out/
 # OS
 .DS_Store
 Thumbs.db
-PLAN.md
 students_griva.txt
 students_kronva.txt
 students_lomo.txt
@@ -23,5 +22,3 @@ teacher.txt
 Аудиторный_фонд_ПИиКТ_Кронверкский_49.txt
 Аудиторный_фонд_ПИиКТ_Гастелло_12.txt
 Аудиторный_фонд_ПИиКТ_Ломоносова_9.txt
-parse_rooms.py
-theory.md

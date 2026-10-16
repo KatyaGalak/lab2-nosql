@@ -1,0 +1,966 @@
+{
+  "rooms": [
+    {
+      "id": "K49-1216",
+      "name": "Энтерпрайз 1216",
+      "type": "COWORKING",
+      "capacity": 10,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1312",
+      "name": "Конференц-зал 1312",
+      "type": "COWORKING",
+      "capacity": 40,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1311",
+      "name": "Переговорка 1311",
+      "type": "COWORKING",
+      "capacity": 10,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1314",
+      "name": "Переговорка 1314",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1",
+      "name": "Переговорная 1 1303/1",
+      "type": "COWORKING",
+      "capacity": 4,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-2",
+      "name": "Переговорная 2 1303/2",
+      "type": "COWORKING",
+      "capacity": 4,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3",
+      "name": "Переговорная 3 1303/3",
+      "type": "COWORKING",
+      "capacity": 4,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4",
+      "name": "Переговорная 4 1303/4",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-5",
+      "name": "Переговорная 5 1303/5",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-6",
+      "name": "Переговорная 6 1303/6",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-7",
+      "name": "Переговорная 7 1303/7",
+      "type": "COWORKING",
+      "capacity": 8,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1212",
+      "name": "Антре 1212",
+      "type": "COWORKING",
+      "capacity": 4,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1217",
+      "name": "Золотое сердце 1217",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1218",
+      "name": "Светлячок 1218",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1215",
+      "name": "Тардис 1215",
+      "type": "COWORKING",
+      "capacity": 8,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1214",
+      "name": "Тысячелетний сокол 1214",
+      "type": "COWORKING",
+      "capacity": 10,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "K49-1200",
+      "name": "Форум (Амфитеатр) 1200",
+      "type": "COWORKING",
+      "capacity": 30,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": true
+    },
+    {
+      "id": "G12-106",
+      "name": "Аудитория 106",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Гастелло, 12, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "G12-109а",
+      "name": "Аудитория 109а",
+      "type": "CLASSROOM",
+      "capacity": 10,
+      "location": "ул. Гастелло, 12, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "G12-109б",
+      "name": "Аудитория 109б",
+      "type": "CLASSROOM",
+      "capacity": 10,
+      "location": "ул. Гастелло, 12, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "G12-109в",
+      "name": "Аудитория 109в",
+      "type": "CLASSROOM",
+      "capacity": 31,
+      "location": "ул. Гастелло, 12, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "G12-301",
+      "name": "Аудитория 301",
+      "type": "CLASSROOM",
+      "capacity": 18,
+      "location": "ул. Гастелло, 12, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "G12-303",
+      "name": "Аудитория 303",
+      "type": "CLASSROOM",
+      "capacity": 14,
+      "location": "ул. Гастелло, 12, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1318",
+      "name": "Аудитория 1318",
+      "type": "CLASSROOM",
+      "capacity": 15,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1320",
+      "name": "Аудитория 1320",
+      "type": "CLASSROOM",
+      "capacity": 25,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1324",
+      "name": "Аудитория 1324",
+      "type": "CLASSROOM",
+      "capacity": 20,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1327",
+      "name": "Аудитория 1327",
+      "type": "CLASSROOM",
+      "capacity": 32,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1328",
+      "name": "Аудитория 1328",
+      "type": "CLASSROOM",
+      "capacity": 36,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1330",
+      "name": "Аудитория 1330",
+      "type": "CLASSROOM",
+      "capacity": 36,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1333",
+      "name": "Аудитория 1333",
+      "type": "CLASSROOM",
+      "capacity": 20,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1338",
+      "name": "Аудитория 1338",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1415",
+      "name": "Аудитория 1415",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1506",
+      "name": "Аудитория 1506",
+      "type": "CLASSROOM",
+      "capacity": 76,
+      "location": "Кронверкский пр., 49, этаж 5",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1509",
+      "name": "Аудитория 1509",
+      "type": "CLASSROOM",
+      "capacity": 25,
+      "location": "Кронверкский пр., 49, этаж 5",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1512",
+      "name": "Аудитория 1512",
+      "type": "CLASSROOM",
+      "capacity": 26,
+      "location": "Кронверкский пр., 49, этаж 5",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1516",
+      "name": "Аудитория 1516",
+      "type": "CLASSROOM",
+      "capacity": 35,
+      "location": "Кронверкский пр., 49, этаж 5",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2110",
+      "name": "Аудитория 2110",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2112",
+      "name": "Аудитория 2112",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2113",
+      "name": "Аудитория 2113",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2305",
+      "name": "Аудитория 2305",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2308",
+      "name": "Аудитория 2308",
+      "type": "CLASSROOM",
+      "capacity": 25,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2109",
+      "name": "Переговорка 2109 (круглый стол)",
+      "type": "CLASSROOM",
+      "capacity": 5,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2115",
+      "name": "Переговорка 2115",
+      "type": "CLASSROOM",
+      "capacity": 5,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3314",
+      "name": "Аудитория 3314",
+      "type": "CLASSROOM",
+      "capacity": 15,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3315",
+      "name": "Аудитория 3315",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1229",
+      "name": "Аудитория 1229",
+      "type": "CLASSROOM",
+      "capacity": 126,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1316",
+      "name": "Аудитория 1316",
+      "type": "CLASSROOM",
+      "capacity": 50,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1404",
+      "name": "Аудитория 1404",
+      "type": "CLASSROOM",
+      "capacity": 168,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1405",
+      "name": "Аудитория 1405",
+      "type": "CLASSROOM",
+      "capacity": 144,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1410",
+      "name": "Аудитория 1410",
+      "type": "CLASSROOM",
+      "capacity": 52,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1419",
+      "name": "Аудитория 1419",
+      "type": "CLASSROOM",
+      "capacity": 145,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-1428",
+      "name": "Аудитория 1428",
+      "type": "CLASSROOM",
+      "capacity": 72,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2201",
+      "name": "Аудитория 2201",
+      "type": "CLASSROOM",
+      "capacity": 54,
+      "location": "Кронверкский пр., 49, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2304",
+      "name": "Аудитория 2304",
+      "type": "CLASSROOM",
+      "capacity": 108,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2314",
+      "name": "Аудитория 2314",
+      "type": "CLASSROOM",
+      "capacity": 16,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2316",
+      "name": "Аудитория 2316",
+      "type": "CLASSROOM",
+      "capacity": 32,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2326",
+      "name": "Аудитория 2326",
+      "type": "CLASSROOM",
+      "capacity": 32,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2330",
+      "name": "Аудитория 2330",
+      "type": "CLASSROOM",
+      "capacity": 28,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2336",
+      "name": "Аудитория 2336",
+      "type": "CLASSROOM",
+      "capacity": 42,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2337",
+      "name": "Аудитория 2337",
+      "type": "CLASSROOM",
+      "capacity": 100,
+      "location": "Кронверкский пр., 49, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2403",
+      "name": "Аудитория 2403",
+      "type": "CLASSROOM",
+      "capacity": 92,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2407",
+      "name": "Аудитория 2407",
+      "type": "CLASSROOM",
+      "capacity": 94,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2412",
+      "name": "Аудитория 2412",
+      "type": "CLASSROOM",
+      "capacity": 32,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2414",
+      "name": "Аудитория 2414",
+      "type": "CLASSROOM",
+      "capacity": 32,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2416",
+      "name": "Аудитория 2416",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2426",
+      "name": "Аудитория 2426",
+      "type": "CLASSROOM",
+      "capacity": 74,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2430",
+      "name": "Аудитория 2430",
+      "type": "CLASSROOM",
+      "capacity": 56,
+      "location": "Кронверкский пр., 49, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "K49-2101",
+      "name": "Лекторий 2101",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "Кронверкский пр., 49, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1121",
+      "name": "Аудитория 1121",
+      "type": "CLASSROOM",
+      "capacity": 64,
+      "location": "ул. Ломоносова, 9, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1122",
+      "name": "Аудитория 1122",
+      "type": "CLASSROOM",
+      "capacity": 92,
+      "location": "ул. Ломоносова, 9, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1123",
+      "name": "Аудитория 1123",
+      "type": "CLASSROOM",
+      "capacity": 92,
+      "location": "ул. Ломоносова, 9, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1124",
+      "name": "Аудитория 1124",
+      "type": "CLASSROOM",
+      "capacity": 80,
+      "location": "ул. Ломоносова, 9, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1220",
+      "name": "Аудитория 1220",
+      "type": "CLASSROOM",
+      "capacity": 78,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1221",
+      "name": "Аудитория 1221",
+      "type": "CLASSROOM",
+      "capacity": 84,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1222",
+      "name": "Аудитория 1222",
+      "type": "CLASSROOM",
+      "capacity": 92,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1223",
+      "name": "Аудитория 1223",
+      "type": "CLASSROOM",
+      "capacity": 84,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1224в",
+      "name": "Аудитория 1224в",
+      "type": "CLASSROOM",
+      "capacity": 46,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1226",
+      "name": "Аудитория 1226",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1310",
+      "name": "Аудитория 1310",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1314",
+      "name": "Аудитория 1314",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1315",
+      "name": "Аудитория 1315",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1603",
+      "name": "Аудитория 1603",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1604",
+      "name": "Аудитория 1604",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1607",
+      "name": "Аудитория 1607",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1608",
+      "name": "Аудитория 1608",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1609",
+      "name": "Аудитория 1609",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1611",
+      "name": "Аудитория 1611",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-1614",
+      "name": "Аудитория 1614",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Ломоносова, 9, этаж 6",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-2202",
+      "name": "Аудитория 2202",
+      "type": "CLASSROOM",
+      "capacity": 86,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-2219",
+      "name": "Аудитория 2219",
+      "type": "CLASSROOM",
+      "capacity": 78,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-2432",
+      "name": "Аудитория 2432",
+      "type": "CLASSROOM",
+      "capacity": 60,
+      "location": "ул. Ломоносова, 9, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3407",
+      "name": "Аудитория 3407",
+      "type": "CLASSROOM",
+      "capacity": 30,
+      "location": "ул. Ломоносова, 9, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3407а",
+      "name": "Аудитория 3407а",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "ул. Ломоносова, 9, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3408",
+      "name": "Аудитория 3408",
+      "type": "CLASSROOM",
+      "capacity": 42,
+      "location": "ул. Ломоносова, 9, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-3412",
+      "name": "Аудитория 3412",
+      "type": "CLASSROOM",
+      "capacity": 46,
+      "location": "ул. Ломоносова, 9, этаж 4",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4103",
+      "name": "Аудитория 4103",
+      "type": "CLASSROOM",
+      "capacity": 18,
+      "location": "ул. Ломоносова, 9, этаж 1",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4202",
+      "name": "Аудитория 4202",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4206",
+      "name": "Аудитория 4206",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4207",
+      "name": "Аудитория 4207",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4208",
+      "name": "Аудитория 4208",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4210",
+      "name": "Аудитория 4210",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4213",
+      "name": "Аудитория 4213",
+      "type": "CLASSROOM",
+      "capacity": 24,
+      "location": "ул. Ломоносова, 9, этаж 2",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4306",
+      "name": "Аудитория 4306",
+      "type": "CLASSROOM",
+      "capacity": 48,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "L9-4307",
+      "name": "Аудитория 4307",
+      "type": "CLASSROOM",
+      "capacity": 40,
+      "location": "ул. Ломоносова, 9, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "B14-358-1",
+      "name": "Аудитория 358/1 (усл)",
+      "type": "CLASSROOM",
+      "capacity": 15,
+      "location": "Биржевая линия, 14, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "B14-358-2",
+      "name": "Аудитория 358/2 (усл)",
+      "type": "CLASSROOM",
+      "capacity": 20,
+      "location": "Биржевая линия, 14, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-327-1",
+      "name": "Переговорная 327/1",
+      "type": "COWORKING",
+      "capacity": 1,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-327-2",
+      "name": "Переговорная 327/2",
+      "type": "COWORKING",
+      "capacity": 1,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-327-3",
+      "name": "Переговорная 327/3",
+      "type": "COWORKING",
+      "capacity": 1,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-330-1",
+      "name": "Переговорная 330/1",
+      "type": "COWORKING",
+      "capacity": 5,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-330-2",
+      "name": "Переговорная 330/2",
+      "type": "COWORKING",
+      "capacity": 6,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    },
+    {
+      "id": "GR-334-1",
+      "name": "Переговорная 334/1",
+      "type": "COWORKING",
+      "capacity": 5,
+      "location": "пер. Гривцова, 14-16, этаж 3",
+      "teacherOnly": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "lecture",
+      "name": "Лекция",
+      "description": "Лекционное занятие"
+    },
+    {
+      "id": "seminar",
+      "name": "Семинар",
+      "description": "Практическое занятие или семинар"
+    },
+    {
+      "id": "meeting",
+      "name": "Встреча",
+      "description": "Рабочая встреча или консультация"
+    },
+    {
+      "id": "event",
+      "name": "Мероприятие",
+      "description": "Внеучебное мероприятие, митап, хакатон"
+    },
+    {
+      "id": "exam",
+      "name": "Экзамен",
+      "description": "Экзамен или зачёт"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "pikt",
+      "name": "Факультет ПИиКТ",
+      "type": "DEPARTMENT",
+      "contact": "pikt@itmo.ru"
+    },
+    {
+      "id": "fitip",
+      "name": "Факультет ИТиП",
+      "type": "DEPARTMENT",
+      "contact": "fitip@itmo.ru"
+    },
+    {
+      "id": "student-council",
+      "name": "Студенческий совет ИТМО",
+      "type": "STUDENT_CLUB",
+      "contact": "@itmo_ss"
+    },
+    {
+      "id": "robotics-club",
+      "name": "Клуб робототехники",
+      "type": "STUDENT_CLUB",
+      "contact": "@itmo_robotics"
+    },
+    {
+      "id": "t-bank",
+      "name": "Т-Банк",
+      "type": "PARTNER",
+      "contact": "edu@tbank.ru"
+    }
+  ],
+  "admin": {
+    "isuId": "100000",
+    "lastName": "Администратор",
+    "firstName": "Главный",
+    "middleName": "Системный",
+    "role": "ADMIN"
+  }
+}

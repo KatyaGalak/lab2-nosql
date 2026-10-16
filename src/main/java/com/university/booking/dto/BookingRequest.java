@@ -3,6 +3,7 @@ package com.university.booking.dto;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import lombok.AllArgsConstructor;
@@ -40,5 +41,9 @@ public class BookingRequest {
     private int participantCount;
 
     @NotBlank
+    @Pattern(regexp = "^\\+?\\d[\\d\\s()\\-]{8,18}\\d$",
+            message = "номер телефона должен содержать 10–15 цифр, например +79991234567")
     private String contactPhone;
+
+    private String organizationId;
 }
