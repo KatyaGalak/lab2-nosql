@@ -1,0 +1,27 @@
+# Build output
+build/
+out/
+
+# Gradle cache
+.gradle/
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+PLAN.md
+students_griva.txt
+students_kronva.txt
+students_lomo.txt
+students_t_bank.txt
+teacher.txt
+Аудиторный_фонд_ПИиКТ_Биржевая_14.txt
+общий_аудиторный_кронверкский.txt
+общий_аудиторный_фонд_ломоносова.txt
+Аудиторный_фонд_ПИиКТ_Кронверкский_49.txt
+Аудиторный_фонд_ПИиКТ_Гастелло_12.txt
+Аудиторный_фонд_ПИиКТ_Ломоносова_9.txt
+parse_rooms.py
+theory.md

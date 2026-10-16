@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: university-booking
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/booking
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2000ms
+
+  cache:
+    type: redis
+
+server:
+  port: 8080
+  error:
+    include-message: always
+
+app:
+  cart:
+    ttl-seconds: 900
+  rate-limit:
+    requests-per-minute: 60
+
+logging:
+  level:
+    com.university.booking: DEBUG
+    org.springframework.data.redis: DEBUG
+  structured:
+    format:
+      console: logstash
