@@ -4,6 +4,8 @@
 
 Доработать приложение из [лабораторной работы №1](https://github.com/alll1lll1lll/lab1-nosql). Существующие CRUD API и key-value-хранилище должны продолжать работать.
 
+Telegram-бот для этого приложения: [lab2-nosql-tg](https://github.com/KatyaGalak/lab2-nosql-tg).
+
 Добавить **MongoDB** для постоянного хранения основных объектов.
 
 Дополнительные параметры
